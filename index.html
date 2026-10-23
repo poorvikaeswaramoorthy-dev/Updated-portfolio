@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poorvika S E | Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:linear-gradient(135deg,#071426,#102b4e,#06101e);color:white;min-height:100vh}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;padding:22px 8%;background:rgba(3,13,28,.8);border-bottom:1px solid rgba(0,229,255,.25)}
+.logo{color:#00e5ff;font-size:25px;font-weight:bold}
+nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+nav button,nav a{color:white;background:transparent;border:0;text-decoration:none;cursor:pointer;font-size:15px;padding:9px 12px;border-radius:6px;transition:.3s}
+nav button:hover,nav button.active,nav a:hover{color:#00e5ff;background:rgba(0,229,255,.1)}
+main{padding:45px 8%}.page{display:none;animation:fadeIn .4s ease}.page.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.home-content{min-height:65vh;display:flex;justify-content:center;align-items:center;gap:45px}.home-text{flex:1}
+.profile-photo{width:min(320px,38vw);aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:22px;border:2px solid rgba(0,229,255,.65);box-shadow:0 0 28px rgba(0,229,255,.16)}
+.small-heading{color:#00e5ff;font-size:18px;margin-bottom:15px}h1{font-size:clamp(35px,6vw,58px);margin-bottom:15px}h1 span,h2 span{color:#00e5ff}
+.home-content p{color:#c7d6e8;line-height:1.8;font-size:17px;max-width:700px}
+.buttons{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.btn{display:inline-block;text-decoration:none;padding:12px 20px;border:1px solid #00e5ff;border-radius:7px;color:#00e5ff;font-weight:bold;transition:.3s;cursor:pointer;background:transparent}
+.btn.primary{background:#00cfe8;color:#06101e}.btn:hover{background:#00e5ff;color:#06101e;transform:translateY(-2px)}
+h2{font-size:32px;margin-bottom:25px}.content-card{background:rgba(255,255,255,.05);border:1px solid rgba(0,229,255,.2);border-radius:12px;padding:25px;margin-bottom:20px;max-width:850px}
+.content-card h3{color:#00e5ff;margin-bottom:12px;line-height:1.5}.content-card p{color:#c7d6e8;line-height:1.8}
+.skills{display:flex;flex-wrap:wrap;gap:12px}.skill{padding:12px 18px;background:rgba(0,229,255,.08);border:1px solid #00a9c4;border-radius:8px;color:#e8faff}
+.project-link{display:inline-block;margin-top:20px}.contact-item{margin:16px 0;color:#c7d6e8;line-height:1.8;overflow-wrap:anywhere}
+.contact-item a{color:#00e5ff;text-decoration:none}.contact-item a:hover{text-decoration:underline}
+footer{text-align:center;padding:22px;color:#9db1c8;border-top:1px solid rgba(0,229,255,.15);margin-top:30px}
+@media(max-width:700px){header{padding:18px 5%}main{padding:35px 5%}nav{gap:4px}nav button,nav a{padding:8px;font-size:14px}.home-content{flex-direction:column-reverse;align-items:flex-start;gap:28px}.profile-photo{width:min(280px,80vw)}.content-card{padding:18px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">Poorvika.</div>
+<nav>
+<button class="active" onclick="showPage('home',this)">Home</button>
+<button onclick="showPage('about',this)">About</button>
+<button onclick="showPage('skills',this)">Skills</button>
+<button id="projectsNav" onclick="showPage('projects',this)">Projects</button>
+<a href="https://github.com/poorvikaeswaramoorthy-dev" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<button onclick="showPage('contact',this)">Contact</button>
+</nav>
+</header>
+<main>
+<section id="home" class="page active">
+<div class="home-content">
+<div class="home-text">
+<div class="small-heading">WELCOME TO MY PORTFOLIO</div>
+<h1>Hi, I'm <span>Poorvika S E</span></h1>
+<h2 style="font-size:25px;margin-bottom:15px">B.Sc Information Technology Student</h2>
+<p>I am an IT student interested in programming, web development, and creating useful technology solutions. I enjoy learning new skills and building projects.</p>
+<div class="buttons">
+<button class="btn primary" onclick="showPage('projects',document.getElementById('projectsNav'))">Explore My Projects</button>
+<a class="btn" href="https://github.com/poorvikaeswaramoorthy-dev" target="_blank" rel="noopener noreferrer">Visit My GitHub ↗</a>
+</div>
+</div>
+<img class="profile-photo" src="profile.jpg" alt="Poorvika S E profile photo">
+</div>
+</section>
+<section id="about" class="page">
+<h2>About <span>Me</span></h2>
+<div class="content-card"><h3>Who Am I?</h3><p>I am Poorvika S E, a B.Sc Information Technology student. I am interested in software development, web technologies, and problem-solving. My goal is to improve my technical skills by learning and developing practical projects.</p></div>
+<div class="content-card"><h3>Education</h3><p>Degree: B.Sc Information Technology<br>College: KG College of Arts and Science<br>Year: 2025–2028</p></div>
+</section>
+<section id="skills" class="page">
+<h2>My <span>Skills</span></h2>
+<div class="content-card"><h3>Technical Skills</h3><div class="skills"><div class="skill">C Programming</div><div class="skill">Java</div><div class="skill">Python</div><div class="skill">HTML</div><div class="skill">CSS</div><div class="skill">JavaScript</div><div class="skill">Web Development</div></div></div>
+<div class="content-card"><h3>Personal Skills</h3><div class="skills"><div class="skill">Teamwork</div><div class="skill">Problem Solving</div><div class="skill">Communication</div><div class="skill">Quick Learning</div></div></div>
+</section>
+<section id="projects" class="page">
+<h2>My <span>Projects</span></h2>
+<div class="content-card">
+<h3>1. AI-Powered Land Wind Matching Platform</h3>
+<p>Wind Connect is a platform designed to help match suitable land locations with wind energy project requirements. It aims to make it easier to identify potential locations for wind energy development.</p>
+<a class="btn primary project-link" href="https://github.com/poorvikaeswaramoorthy-dev/Wind-Connect" target="_blank" rel="noopener noreferrer">View Project on GitHub ↗</a>
+</div>
+<div class="content-card">
+<h3>2. Clinic Prescription Record and Patient Visit Tracking System</h3>
+<p>This Java project helps maintain patient details, prescription records, and patient visit counts. It is designed to make basic clinic record management easier.</p>
+<a class="btn primary project-link" href="https://github.com/poorvikaeswaramoorthy-dev/CLINIC-PRESCRIPTION-RECORD-AND-PATIENT-VISIT-TRACKING-SYSTEM" target="_blank" rel="noopener noreferrer">View Java Project on GitHub ↗</a>
+</div>
+<div class="content-card"><h3>Explore More on GitHub</h3><p>Visit my GitHub profile to explore my repositories, source code, and other projects.</p><a class="btn project-link" href="https://github.com/poorvikaeswaramoorthy-dev" target="_blank" rel="noopener noreferrer">Open My GitHub Profile ↗</a></div>
+</section>
+<section id="contact" class="page">
+<h2>Contact <span>Me</span></h2>
+<div class="content-card"><h3>Let's Connect!</h3>
+<div class="contact-item"><strong>Email:</strong> <a href="mailto:poorvikaeswaramoorthy@gmail.com">poorvikaeswaramoorthy@gmail.com</a></div>
+<div class="contact-item"><strong>GitHub:</strong> <a href="https://github.com/poorvikaeswaramoorthy-dev" target="_blank" rel="noopener noreferrer">github.com/poorvikaeswaramoorthy-dev ↗</a></div>
+</div>
+</section>
+</main>
+<footer><p>© 2026 Poorvika S E | Personal Portfolio</p></footer>
+<script>
+function showPage(pageId,clickedButton){
+ document.querySelectorAll(".page").forEach(function(page){page.classList.remove("active");});
+ const selectedPage=document.getElementById(pageId);
+ if(selectedPage) selectedPage.classList.add("active");
+ document.querySelectorAll("nav button").forEach(function(button){button.classList.remove("active");});
+ if(clickedButton && clickedButton.tagName==="BUTTON") clickedButton.classList.add("active");
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+</body>
+</html>
